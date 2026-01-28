@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyser les styles CSS récurrents – Capsule pédagogique</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <main class="slide-shell" aria-live="polite">
+        <header class="slide-header">
+          <div class="slide-title-group">
+            <div class="slide-title">Analyser les styles CSS récurrents</div>
+          </div>
+          <div class="slide-progress" id="slide-progress">Slide 1 / 7</div>
+        </header>
+
+        <section class="slide-body" id="slide-body">
+          <div class="slide-main" id="slide-main">
+            <!-- Contenu textuel injecté par script.js -->
+          </div>
+
+          <aside class="slide-aside" id="slide-aside">
+            <div class="aside-header">
+              <div class="aside-title">Fichier CSS</div>
+              <div class="aside-tag" id="aside-tag">Observation</div>
+            </div>
+            <div class="code-window">
+              <div class="code-header">
+                <div class="code-dots">
+                  <span class="code-dot red"></span>
+                  <span class="code-dot yellow"></span>
+                  <span class="code-dot green"></span>
+                </div>
+                <span class="code-filename" id="code-filename">styles.css</span>
+              </div>
+              <pre id="code-content"></pre>
+            </div>
+          </aside>
+        </section>
+
+        <footer class="slide-footer">
+          <div class="footer-meta">
+            <span>Objectif : analyser les répétitions de styles CSS</span>
+          </div>
+          <div class="nav-buttons">
+            <button class="nav-button" id="prev-btn" type="button">
+              ← Précédent
+            </button>
+            <button class="nav-button primary" id="next-btn" type="button">
+              Suivant →
+            </button>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
