@@ -174,81 +174,125 @@ const slides = [
   {
     id: 3,
     type: "problematization",
-    headerTag: "Questionnement",
+    headerTag: "Zoom",
     title: "Et si je dois tout modifier ?",
     badge: "Réflexion",
     text: [
       "Ces styles sont utilisés à plusieurs endroits du site.",
       "Ils remplissent la même fonction visuelle, mais sont dupliqués dans le code."
     ],
-    questionBlock: {
-      title: "Question",
-      content:
-        "Que se passe-t-il si vous devez modifier cette valeur partout dans le projet ? Combien d’endroits devrez-vous mettre à jour ?"
-    },
+    questionBlock: null,
     narration:
       "Que se passe-t-il si je dois modifier cette valeur partout dans le projet ? Combien d'endroits devrais-je mettre à jour ?",
-    codeFilename: "layout.css",
+    codeFilename: "styles.css",
     code: `
-<span class="css-selector">.hero-title</span> {
-  <span class="css-prop">font-size</span>: <span class="css-value">32px</span>;
-  <span class="css-prop">margin-bottom</span>: <span class="css-value">24px</span>;
-}
-
-<span class="css-selector">.page-title</span> {
-  <span class="css-prop">font-size</span>: <span class="css-value">32px</span>;
-  <span class="css-prop">margin-bottom</span>: <span class="css-value">24px</span>;
-}
-
-<span class="css-selector">.section-title</span> {
-  <span class="css-prop">font-size</span>: <span class="css-value">24px</span>;
-  <span class="css-prop">margin-bottom</span>: <span class="css-value">24px</span>;
+<span class="css-selector">.header</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value css-highlight">#2c3e50</span> <span class="counter-chip counter-chip--pulse">x4</span>;
+  <span class="css-prop">color</span>: <span class="css-value css-highlight">#ffffff</span> <span class="counter-chip counter-chip--pulse">x5</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value css-highlight css-highlight--accent">16px</span> <span class="counter-chip counter-chip--pulse">x4</span>;
+  <span class="css-prop">padding</span>: <span class="css-value css-highlight">20px</span> <span class="counter-chip counter-chip--pulse">x5</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value css-highlight">30px</span> <span class="counter-chip counter-chip--pulse">x4</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value css-highlight">8px</span> <span class="counter-chip counter-chip--pulse">x5</span>;
 }
     `.trim()
   },
   {
     id: 4,
-    type: "activite",
-    headerTag: "Activité",
-    title: "À vous d’analyser un nouveau fichier CSS",
-    badge: "Pratique autonome",
+    type: "questionnement",
+    headerTag: "Questionnement",
+    title: "Questions à l’écran",
+    badge: "Pause (réflexion)",
     text: [
-      "À votre tour : observez ce nouveau fichier CSS et repérez au moins trois répétitions de styles.",
-      "Notez-les mentalement ou sur un papier avant de passer à la suite."
+      "Prenez un instant pour vous projeter : que se passe-t-il si une valeur répétée doit changer partout ?",
     ],
-    questionBlock: {
-      title: "Consigne",
-      content:
-        "Repérez au moins 3 répétitions : même couleur réutilisée, mêmes marges, mêmes tailles de texte, etc."
-    },
+    questionBlock: null,
     narration:
-      "À votre tour. Observez ce nouveau fichier CSS et repérez au moins trois répétitions de styles.",
-    codeFilename: "theme.css",
+      "Que se passe-t-il si je dois modifier cette valeur partout dans le projet ? Combien d'endroits devrais-je mettre à jour ?",
+    codeFilename: "styles.css",
     code: `
-<span class="css-selector">.btn-primary</span> {
-  <span class="css-prop">background-color</span>: <span class="css-value">#1d4ed8</span>;
+<span class="css-selector">.header</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#2c3e50</span>;
   <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
-  <span class="css-prop">padding</span>: <span class="css-value">10px 20px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">16px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">30px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">8px</span>;
 }
 
-<span class="css-selector">.btn-danger</span> {
-  <span class="css-prop">background-color</span>: <span class="css-value">#dc2626</span>;
+<span class="css-selector">.navigation</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#2c3e50</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">14px</span>;
+}
+
+<span class="css-selector">.button-primary</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#3498db</span>;
   <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
-  <span class="css-prop">padding</span>: <span class="css-value">10px 20px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">16px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">15px 30px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">8px</span>;
+  <span class="css-prop">border</span>: <span class="css-value">none</span>;
 }
 
-<span class="css-selector">.badge</span> {
-  <span class="css-prop">border-radius</span>: <span class="css-value">999px</span>;
-  <span class="css-prop">padding</span>: <span class="css-value">4px 12px</span>;
-  <span class="css-prop">font-size</span>: <span class="css-value">12px</span>;
+<span class="css-selector">.button-secondary</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#95a5a6</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">16px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">15px 30px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">8px</span>;
+  <span class="css-prop">border</span>: <span class="css-value">none</span>;
 }
 
-<span class="css-selector">.tag</span> {
-  <span class="css-prop">border-radius</span>: <span class="css-value">999px</span>;
-  <span class="css-prop">padding</span>: <span class="css-value">4px 12px</span>;
-  <span class="css-prop">font-size</span>: <span class="css-value">12px</span>;
+<span class="css-selector">.card</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">30px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">8px</span>;
+  <span class="css-prop">box-shadow</span>: <span class="css-value">0 2px 4px rgba(0, 0, 0, 0.1)</span>;
+}
+
+<span class="css-selector">.sidebar</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#ecf0f1</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">30px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">14px</span>;
+}
+
+<span class="css-selector">.footer</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#2c3e50</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">14px</span>;
+}
+
+<span class="css-selector">.alert</span> {
+  <span class="css-prop">padding</span>: <span class="css-value">15px 30px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">30px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">8px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">16px</span>;
+}
+
+<span class="css-selector">.link</span> {
+  <span class="css-prop">color</span>: <span class="css-value">#3498db</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">14px</span>;
 }
     `.trim()
+    ,
+    codeOverlays: [
+      {
+        variant: "yellow",
+        top: -10,
+        left: 17,
+        text:
+          "Que se passe-t-il si je dois modifier cette valeur partout dans le projet ?"
+      },
+      {
+        variant: "blue",
+        top: 25,
+        left: 15,
+        text: "Combien d’endroits devrais-je mettre à jour ?"
+      }
+    ]
   },
   {
     id: 5,
@@ -257,8 +301,8 @@ const slides = [
     title: "Mettre à plat ce que vous avez repéré",
     badge: "Pause (analyse)",
     text: [
-      "Avant le QCM, prenez 20 secondes pour lister mentalement vos répétitions repérées (couleurs, marges, tailles…).",
-      "L’idée ici n’est pas de corriger, mais de faire émerger le besoin de factoriser."
+      "À votre tour.",
+      "Observez ce nouveau fichier CSS et repérez au moins trois répétitions de styles."
     ],
     questionBlock: {
       title: "Mini-pause",
@@ -267,77 +311,145 @@ const slides = [
     },
     codeFilename: "theme.css",
     code: `
-<span class="css-selector">.btn-primary</span> {
-  <span class="css-prop">padding</span>: <span class="css-value css-highlight">10px 20px</span>;
+<span class="css-selector">.header</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#34495e</span>;
   <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">18px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">25px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">20px</span>;
 }
 
-<span class="css-selector">.btn-danger</span> {
-  <span class="css-prop">padding</span>: <span class="css-value css-highlight">10px 20px</span> <span class="counter-chip">répétée</span>;
+<span class="css-selector">.navigation</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#34495e</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">15px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">14px</span>;
+}
+
+<span class="css-selector">.button-primary</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#3498db</span>;
   <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">16px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">12px 24px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">5px</span>;
 }
 
-<span class="css-selector">.badge</span> {
-  <span class="css-prop">border-radius</span>: <span class="css-value css-highlight css-highlight--accent">999px</span>;
+<span class="css-selector">.button-secondary</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#95a5a6</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#ecf0f1</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">16px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">12px 24px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">5px</span>;
 }
 
-<span class="css-selector">.tag</span> {
-  <span class="css-prop">border-radius</span>: <span class="css-value css-highlight css-highlight--accent">999px</span> <span class="counter-chip">répétée</span>;
+<span class="css-selector">.card</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">18px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">box-shadow</span>: <span class="css-value">0 3px 6px rgba(0, 0, 0, 0.15)</span>;
+}
+
+<span class="css-selector">.sidebar</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#ecf0f1</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">15px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">14px</span>;
+}
+
+<span class="css-selector">.footer</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#2c3e50</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">20px</span>;
+}
+
+<span class="css-selector">.alert</span> {
+  <span class="css-prop">padding</span>: <span class="css-value">12px 24px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">5px</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#e74c3c</span>;
 }
     `.trim()
   },
   {
     id: 6,
-    type: "qcm",
-    headerTag: "Auto-évaluation",
-    title: "Identifier les répétitions de styles",
-    badge: "QCM / feedback immédiat",
+    type: "dragdrop",
+    headerTag: "Évaluer",
+    title: "Auto-évaluation : identifier les répétitions",
+    badge: "Glisser-déposer",
     text: [
-      "Parmi les éléments suivants, lesquels relèvent d’une répétition de styles ?",
-      "Cliquez sur toutes les bonnes réponses pour vérifier votre compréhension."
+      "Parmi les éléments suivants, lesquels relèvent d'une répétition de styles ?",
+      "Glissez-déposez les éléments dans la zone de dépôt pour obtenir un feedback immédiat."
     ],
     questionBlock: null,
-    codeFilename: "exemple.css",
-    code: `
-<span class="css-selector">.title-main</span> {
-  <span class="css-prop">font-size</span>: <span class="css-value">24px</span>;
+    showCode: false,
+    dragDrop: {
+      question:
+        "Parmi les éléments suivants, lesquels relèvent d'une répétition de styles ?",
+      options: [
+        { id: "o1", label: "#ffffff", repeats: 4 },
+        { id: "o2", label: "padding: 12px 24px", repeats: 3 },
+        { id: "o3", label: "margin-bottom: 20px", repeats: 3 },
+        { id: "o4", label: "font-size: 14px", repeats: 3 },
+        { id: "o5", label: "border-radius: 5px", repeats: 3 },
+        { id: "o6", label: "background-color: #ecf0f1", repeats: 1 },
+        { id: "o7", label: "box-shadow: 0 3px 6px", repeats: 1 },
+        { id: "o8", label: "color: #e74c3c", repeats: 1 }
+      ],
+      codeHtml: `
+<span class="css-selector css-selector--red">.header</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#34495e</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">18px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">25px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">20px</span>;
 }
 
-<span class="css-selector">.title-sidebar</span> {
-  <span class="css-prop">font-size</span>: <span class="css-value">18px</span>;
+<span class="css-selector css-selector--red">.navigation</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#34495e</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">15px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">14px</span>;
 }
-    `.trim(),
-    qcm: {
-      options: [
-        {
-          id: "a",
-          label:
-            "Deux boutons différents (.btn-primary et .btn-secondary) qui partagent exactement la même couleur de fond.",
-          correct: true
-        },
-        {
-          id: "b",
-          label:
-            "Deux titres qui ont des tailles de police proches (24px et 26px) mais définies séparément.",
-          correct: true
-        },
-        {
-          id: "c",
-          label:
-            "Un paragraphe unique qui a une couleur et une marge définies une seule fois.",
-          correct: false
-        },
-        {
-          id: "d",
-          label:
-            "Plusieurs badges qui utilisent tous la même classe .badge avec les mêmes propriétés.",
-          correct: false
-        }
-      ],
-      feedbackCorrect:
-        "Exact : les répétitions de styles apparaissent lorsque la même intention visuelle est codée plusieurs fois, souvent avec les mêmes valeurs.",
-      feedbackIncorrect:
-        "Regardez les cas où la même valeur (couleur, marge, taille de texte) doit être maintenue à plusieurs endroits différents."
+
+<span class="css-selector css-selector--red">.button-primary</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#3498db</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">16px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">12px 24px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">5px</span>;
+}
+
+<span class="css-selector css-selector--red">.button-secondary</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#95a5a6</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#ecf0f1</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">16px</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">12px 24px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">5px</span>;
+}
+
+<span class="css-selector css-selector--red">.card</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">18px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">box-shadow</span>: <span class="css-value">0 3px 6px rgba(0, 0, 0, 0.15)</span>;
+}
+
+<span class="css-selector css-selector--red">.sidebar</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#ecf0f1</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">15px</span>;
+  <span class="css-prop">font-size</span>: <span class="css-value">14px</span>;
+}
+
+<span class="css-selector css-selector--red">.footer</span> {
+  <span class="css-prop">background-color</span>: <span class="css-value">#2c3e50</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#ffffff</span>;
+  <span class="css-prop">padding</span>: <span class="css-value">20px</span>;
+}
+
+<span class="css-selector css-selector--red">.alert</span> {
+  <span class="css-prop">padding</span>: <span class="css-value">12px 24px</span>;
+  <span class="css-prop">margin-bottom</span>: <span class="css-value">20px</span>;
+  <span class="css-prop">border-radius</span>: <span class="css-value">5px</span>;
+  <span class="css-prop">color</span>: <span class="css-value">#e74c3c</span>;
+}
+      `.trim()
     }
   },
   {
@@ -370,6 +482,7 @@ const slideMainEl = document.getElementById("slide-main");
 const progressEl = document.getElementById("slide-progress");
 const codeContentEl = document.getElementById("code-content");
 const codeFilenameEl = document.getElementById("code-filename");
+const codeOverlaysEl = document.getElementById("code-overlays");
 const asideTagEl = document.getElementById("aside-tag");
 const slideBodyEl = document.getElementById("slide-body");
 const slideAsideEl = document.getElementById("slide-aside");
@@ -393,6 +506,213 @@ function animateCounter(element, target, durationMs) {
   requestAnimationFrame(frame);
 }
 
+function buildBadgeHtml(slide) {
+  return slide.badge
+    ? `<span class="badge"><span class="badge-dot"></span>${slide.badge}</span>`
+    : "";
+}
+
+function buildQuestionBlockHtml(slide) {
+  if (!slide.questionBlock) return "";
+  return `
+    <div class="question-block">
+      <strong>${slide.questionBlock.title}</strong>
+      <span>${slide.questionBlock.content}</span>
+    </div>
+  `;
+}
+
+function buildQcmBlockHtml(slide) {
+  if (slide.type !== "qcm" || !slide.qcm) return "";
+
+  const optionsHtml = slide.qcm.options
+    .map(
+      (opt) => `
+      <button class="qcm-option" data-id="${opt.id}">
+        ${opt.label}
+      </button>
+    `
+    )
+    .join("");
+
+  return `
+      <div class="qcm-options" id="qcm-options">
+        ${optionsHtml}
+      </div>
+      <div class="qcm-feedback" id="qcm-feedback"></div>
+    `;
+}
+
+function buildDragDropHtml(slide) {
+  if (slide.type !== "dragdrop" || !slide.dragDrop) return "";
+
+  const opts = slide.dragDrop.options ?? [];
+  const buttons = opts
+    .map(
+      (o) => `
+      <button class="dd-chip" draggable="true" data-id="${o.id}">
+        ${o.label}
+      </button>
+    `
+    )
+    .join("");
+
+  return `
+    <div class="dd-layout" id="dd-layout">
+      <div class="dd-code">
+        <div class="dd-code-title">Code CSS</div>
+        <div class="dd-code-window">
+          <pre class="dd-code-pre">${slide.dragDrop.codeHtml}</pre>
+        </div>
+      </div>
+
+      <div class="dd-activity">
+        <div class="dd-question">${slide.dragDrop.question}</div>
+
+        <div class="dd-grid" id="dd-grid">
+          ${buttons}
+        </div>
+
+        <div class="dd-drop-row">
+          <div class="dd-arrow" aria-hidden="true"></div>
+          <div class="dd-dropzone" id="dd-dropzone">
+            <div class="dd-dropzone-title">Zone de dépôt</div>
+            <div class="dd-dropzone-items" id="dd-dropzone-items"></div>
+          </div>
+        </div>
+
+        <div class="dd-feedback" id="dd-feedback" aria-live="polite"></div>
+      </div>
+    </div>
+  `;
+}
+
+function initDragDrop(slide) {
+  if (slide.type !== "dragdrop" || !slide.dragDrop) return;
+
+  const grid = document.getElementById("dd-grid");
+  const dropzone = document.getElementById("dd-dropzone");
+  const items = document.getElementById("dd-dropzone-items");
+  const feedback = document.getElementById("dd-feedback");
+  if (!grid || !dropzone || !items || !feedback) return;
+
+  const optionById = new Map(
+    (slide.dragDrop.options ?? []).map((o) => [o.id, o])
+  );
+
+  grid.addEventListener("dragstart", (e) => {
+    const target = e.target;
+    if (!(target instanceof HTMLElement)) return;
+    const chip = target.closest(".dd-chip");
+    if (!chip) return;
+    const id = chip.dataset.id;
+    if (!id) return;
+    e.dataTransfer?.setData("text/plain", id);
+    e.dataTransfer?.setData("application/x-dd-id", id);
+    e.dataTransfer?.setDragImage(chip, 10, 10);
+  });
+
+  dropzone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropzone.classList.add("is-over");
+  });
+
+  dropzone.addEventListener("dragleave", () => {
+    dropzone.classList.remove("is-over");
+  });
+
+  dropzone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropzone.classList.remove("is-over");
+
+    const id =
+      e.dataTransfer?.getData("application/x-dd-id") ??
+      e.dataTransfer?.getData("text/plain");
+    if (!id) return;
+
+    const opt = optionById.get(id);
+    if (!opt) return;
+
+    const isRepeated = (opt.repeats ?? 1) > 1;
+    const randomPart =
+      globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`;
+    const itemId = `dd-item-${randomPart}`;
+
+    const item = document.createElement("div");
+    item.className = `dd-item ${isRepeated ? "is-correct" : "is-wrong"}`;
+    item.id = itemId;
+
+    const label = document.createElement("div");
+    label.className = "dd-item-label";
+    label.textContent = opt.label;
+
+    const remove = document.createElement("button");
+    remove.className = "dd-item-remove";
+    remove.type = "button";
+    remove.setAttribute("aria-label", "Retirer");
+    remove.textContent = "×";
+
+    const message = document.createElement("div");
+    message.className = `dd-msg ${isRepeated ? "dd-msg--ok" : "dd-msg--no"}`;
+    message.textContent = isRepeated
+      ? `✓ Correct ! Cette valeur apparaît ${opt.repeats} fois dans le code.`
+      : "✗ Incorrect. Cette valeur n'apparaît qu'une seule fois, ce n'est donc pas une répétition.";
+
+    item.appendChild(label);
+    item.appendChild(remove);
+    items.appendChild(item);
+
+    feedback.innerHTML = "";
+    feedback.appendChild(message);
+
+    remove.addEventListener("click", () => {
+      item.remove();
+      feedback.innerHTML = "";
+    });
+  });
+}
+
+function buildCounterBlockHtml(slide) {
+  if (typeof slide.totalRepeats !== "number") return "";
+  return `
+    <div class="global-counter">
+      <div class="global-counter-label">Répétitions repérées dans ce code</div>
+      <div class="global-counter-value" id="global-counter-value">0</div>
+    </div>
+  `;
+}
+
+function buildCodeOverlaysHtml(slide) {
+  const overlays = Array.isArray(slide.codeOverlays) ? slide.codeOverlays : [];
+  return overlays
+    .map((o) => {
+      const klass =
+        o.variant === "blue" ? "code-bubble--blue" : "code-bubble--yellow";
+      const top = typeof o.top === "number" ? `${o.top}%` : "10%";
+      const left = typeof o.left === "number" ? `${o.left}%` : "10%";
+      return `<div class="code-bubble ${klass}" style="top:${top};left:${left};">${o.text}</div>`;
+    })
+    .join("");
+}
+
+function renderCodePanel(slide, shouldShowCode) {
+  if (!shouldShowCode) {
+    if (codeOverlaysEl) codeOverlaysEl.innerHTML = "";
+    return;
+  }
+
+  asideTagEl.textContent = slide.headerTag;
+  codeFilenameEl.textContent = slide.codeFilename;
+  codeContentEl.innerHTML = slide.code;
+  if (codeOverlaysEl) codeOverlaysEl.innerHTML = buildCodeOverlaysHtml(slide);
+}
+
+function toggleCodePanel(shouldShowCode) {
+  if (!slideAsideEl || !slideBodyEl) return;
+  slideAsideEl.hidden = !shouldShowCode;
+  slideBodyEl.classList.toggle("is-code-hidden", !shouldShowCode);
+}
+
 function renderSlide(index) {
   const slide = slides[index];
   if (!slide) return;
@@ -400,80 +720,23 @@ function renderSlide(index) {
   // Progression
   progressEl.textContent = `Slide ${index + 1} / ${slides.length}`;
 
-  // Affichage/masquage de l'encart "Fichier CSS" (ex : conclusion)
   const shouldShowCode = slide.showCode !== false;
-  if (slideAsideEl && slideBodyEl) {
-    slideAsideEl.hidden = !shouldShowCode;
-    slideBodyEl.classList.toggle("is-code-hidden", !shouldShowCode);
-  }
-
-  // Tag & fichier
-  if (shouldShowCode) {
-    asideTagEl.textContent = slide.headerTag;
-    codeFilenameEl.textContent = slide.codeFilename;
-  }
+  toggleCodePanel(shouldShowCode);
 
   // Contenu principal
-  const paragraphs = slide.text
-    .map((t) => `<p>${t}</p>`)
-    .join("");
-
-  const badge = slide.badge
-    ? `<span class="badge"><span class="badge-dot"></span>${slide.badge}</span>`
-    : "";
-
-  const questionBlock = slide.questionBlock
-    ? `
-    <div class="question-block">
-      <strong>${slide.questionBlock.title}</strong>
-      <span>${slide.questionBlock.content}</span>
-    </div>
-  `
-    : "";
-
-  let qcmBlock = "";
-  if (slide.type === "qcm" && slide.qcm) {
-    const optionsHtml = slide.qcm.options
-      .map(
-        (opt) => `
-      <button class="qcm-option" data-id="${opt.id}">
-        ${opt.label}
-      </button>
-    `
-      )
-      .join("");
-
-    qcmBlock = `
-      <div class="qcm-options" id="qcm-options">
-        ${optionsHtml}
-      </div>
-      <div class="qcm-feedback" id="qcm-feedback"></div>
-    `;
-  }
-
-  const counterBlock =
-    typeof slide.totalRepeats === "number"
-      ? `
-    <div class="global-counter">
-      <div class="global-counter-label">Répétitions repérées dans ce code</div>
-      <div class="global-counter-value" id="global-counter-value">0</div>
-    </div>
-  `
-      : "";
+  const paragraphs = slide.text.map((t) => `<p>${t}</p>`).join("");
 
   slideMainEl.innerHTML = `
-    ${badge}
+    ${buildBadgeHtml(slide)}
     <h2>${slide.title}</h2>
     ${paragraphs}
-    ${questionBlock}
-    ${counterBlock}
-    ${qcmBlock}
+    ${buildQuestionBlockHtml(slide)}
+    ${buildCounterBlockHtml(slide)}
+    ${buildQcmBlockHtml(slide)}
+    ${buildDragDropHtml(slide)}
   `;
 
-  // Code
-  if (shouldShowCode) {
-    codeContentEl.innerHTML = slide.code;
-  }
+  renderCodePanel(slide, shouldShowCode);
 
   // Animation du compteur global (slide 2)
   if (typeof slide.totalRepeats === "number") {
@@ -491,6 +754,10 @@ function renderSlide(index) {
   qcmAnswered = false;
   if (slide.type === "qcm" && slide.qcm) {
     initQcm(slide);
+  }
+
+  if (slide.type === "dragdrop" && slide.dragDrop) {
+    initDragDrop(slide);
   }
 }
 
